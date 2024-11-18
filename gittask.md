@@ -1,6 +1,6 @@
 # PART 1 Git Basics
 
-## Task 1: Install and Configure Git
+### Task 1: Install and Configure Git
 
 1. Install Git from  [git-scm.com](https://git-scm.com/downloads).
 
@@ -18,7 +18,7 @@ These commands tell Git your name and email. This information will be added to e
 
 Use git config --list to verify your configuration.
 
-## Task 2: Initialize a Repository
+### Task 2: Initialize a Repository
 
 1. Create a new folder for your project and navigate to it:
 
@@ -32,7 +32,7 @@ _____
 
 # Part 2 : Git Workflow
 
-## Task 3: Create a File and Make Multiple Commits
+### Task 3: Create a File and Make Multiple Commits
 
 1.Create a file and add some content:
 
@@ -52,7 +52,7 @@ git add README.md
 git commit -m "Initial commit: Added README.md"
 ```
 
-## Task 4: Check Status and Log
+### Task 4: Check Status and Log
 
 1.Modify the file
 ```bash
@@ -88,7 +88,7 @@ This command discards any changes made to the file since the last commit.
 
 # Part 3 : Branching and Merging
 
-## Task 6 : Branch Management
+### Task 6 : Branch Management
 
 1.Create a new branch and switch to it
 
@@ -112,7 +112,7 @@ git branch -m feature-branch feature-enhanced
 ```
 This command renames the branch feature-branch to feature-enhanced.
 
-## Task 7 : Merging Branches
+### Task 7 : Merging Branches
 
 1. Merge feature-enhanced into main
 
@@ -139,7 +139,7 @@ git commit -m "Resolved conflict"
 
 # Part 4 Remote repositories
 
-## Task 9 : Remote setup
+### Task 9 : Remote setup
 1. Add a remote repository:
 
 ```bash
@@ -153,5 +153,152 @@ This command adds a remote repository named origin to your local repository. The
 ```bash
 git remote -v
 ```
-
 This command displays the remote repositories associated with your local repository.
+
+Output would be:
+```bash
+origin  https://github.com/Hardagya12/salesforce-clone.git (fetch)
+
+origin  https://github.com/Hardagya12/salesforce-clone.git (push)
+```
+### Task 10 : Pushing and Pulling Changes
+
+1. Push changes to the remote repository:
+
+```bash
+git push origin feature-enhanced
+```
+
+This command pushes the changes in the main branch to the remote repository.
+
+2. Pull changes from the remote repository:
+
+```bash
+git pull origin feature-enhanced
+```
+
+This command pulls the changes from the remote repository and merges them into the main branch.
+
+### Task 11 : Cloning a Repository
+
+1. Clone a remote repository:
+``` bash
+git clone https://github.com/Hardagya12/salesforce-clone.git
+```
+This command clones the remote repository and creates a local copy of it.
+
+# Part 5 Advanced Git
+### Task 12 : Stashing Changes
+
+1. Save uncommitted changes
+
+```bash
+git stash
+```
+This command saves the uncommitted changes in a temporary stash.
+
+2. Apply saved changes
+
+```bash
+git stash apply
+```
+This command applies the saved changes to the current branch.
+
+3. Drop the stash
+
+```bash
+git stash drop
+```
+This command drops the temporary stash.
+
+### Task 13 : tagging Commits
+
+1. Create a tag and annote it
+
+```bash
+git tag -a v1.0 -m "Version 1.0"
+```
+This command creates a tag named v1.0 and annotates it with the message "Version 1.0".
+
+2. List all the tags
+
+```bash
+git tag
+``` 
+3.Push the tag to the remote repository 
+
+```bash
+git push origin v1.0
+```
+
+### Task 14 : Rewriting Commit History
+
+1.Use interactive rebase to modify commit messages
+
+```bash
+git rebase -i HEAD~3
+```
+This command starts an interactive rebase session, allowing you to modify the commit messages.
+
+### Task 15 : Cherrypicking Commits
+
+1.Apply a specific commit to another branch
+
+```bash 
+git cherry-pick <commit-hash>
+```
+This command applies a specific commit to the current branch.
+
+# Part 6 : Collaboration
+
+### Task 16 : Forking and Pull Requests
+
+1. Fork a repository and cone locally
+
+```bash
+git clone https://github.com/Hardagya12/salesforce-clone.git
+```
+This command clones the remote repository and creates a local copy of it.
+
+2. Make changes and push them
+
+```bash 
+git checkout -b fix-typo
+echo "Typo fixed" >> README.md
+git commit -m "Fixed a typo"
+git push origin fix-typo
+```
+This command creates a new branch named fix-typo and pushes the changes to the remote repository.
+
+
+3. Open a pull request on GitHub
+
+### Task 17 : Simulating Team Collaboration
+
+1.Simulate a conflict by having two users modify the same file
+
+```bash
+git checkout -b feature-enhanced
+echo "Feature added" >> file1.txt
+git commit -m "Added feature"
+
+git checkout main
+echo "Bug fixed" >> file1.txt
+git commit -m "Fixed a bug"
+```
+2. Practice resolving conflicts as a teeam
+
+---
+
+# Part 7 : Ignoring Files
+
+### Task 18 : Using .gitignore
+
+1. Create a .gitignore file
+
+```bash
+echo "node_modules" > .gitignore
+git add .gitignore
+git commit -m "Added .gitignore"
+```
+This command creates a .gitignore file and adds it to the staging area.
