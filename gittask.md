@@ -128,4 +128,30 @@ This command merges the feature-enhanced branch into the main branch.
 1. Create two conflicting branches and resolve a commit manually:
 
 ```bash
-git merge 
+git merge feature-branch
+```
+
+2. Resolve the conflict manually:
+```bash
+git add file1.txt
+git commit -m "Resolved conflict"
+```
+
+# Part 4 Remote repositories
+
+## Task 9 : Remote setup
+1. Add a remote repository:
+
+```bash
+git remote add origin https://github.com/Hardagya12/salesforce-clone.git
+```
+
+This command adds a remote repository named origin to your local repository. The remote repository is a copy of the original repository on GitHub.
+
+2. Verify the remote repository:
+
+```bash
+git remote -v
+```
+
+This command displays the remote repositories associated with your local repository.
