@@ -302,3 +302,37 @@ git add .gitignore
 git commit -m "Added .gitignore"
 ```
 This command creates a .gitignore file and adds it to the staging area.
+
+.gitignore : This file contains a list of files and directories to ignore when committing changes to the repository.
+
+# Part 8: Automation and Cleanup
+
+### Task 19 : Cleaning the repository
+
+1. Remove untracked files
+
+```bash
+git clean -f
+```
+
+This command removes all untracked files from the repository.
+
+Which means it will delete any files that are not in the staging area or the working directory.
+
+### Task 20 : Aliases and Shortcuts
+
+1. Create aliases for common commands
+
+```bash
+git config --global alias.st status
+git config --global alias.cm commit
+```
+
+This command creates aliases for the status and commit commands. You can now use the aliases instead of typing the full command.
+
+2. Shortcut commands
+
+```bash
+git st
+git cm -m "Commit message"
+```
