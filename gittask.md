@@ -302,3 +302,77 @@ git add .gitignore
 git commit -m "Added .gitignore"
 ```
 This command creates a .gitignore file and adds it to the staging area.
+
+.gitignore : This file contains a list of files and directories to ignore when committing changes to the repository.
+
+# Part 8: Automation and Cleanup
+
+### Task 19 : Cleaning the repository
+
+1. Remove untracked files
+
+```bash
+git clean -f
+```
+
+This command removes all untracked files from the repository.
+
+Which means it will delete any files that are not in the staging area or the working directory.
+
+### Task 20 : Aliases and Shortcuts
+
+1. Create aliases for common commands
+
+```bash
+git config --global alias.st status
+git config --global alias.cm commit
+```
+
+This command creates aliases for the status and commit commands. You can now use the aliases instead of typing the full command.
+
+2. Shortcut commands
+
+```bash
+git st
+git cm -m "Commit message"
+```
+# SUMMARY OF ALL COMMANDS
+
+| Command | Description |
+| --- | --- |
+| git init | Initialize a new Git repository |
+| git status | Show the current status of the repository |
+| git add <file> | Add a file to the staging area |
+| git commit -m "message" | Commit changes to the repository |
+| git diff | Show the differences between the current state and the last committed state |
+| git reset <file> | Unstage a file |
+| git checkout -- <file> | Discard changes made to a file |
+| git branch | List all branches |
+| git branch -m <old_branch> <new_branch> | Rename a branch |
+| git checkout <branch> | Switch to a branch |
+| git merge <branch> | Merge a branch into the current branch |
+| git remote add <remote_name> <remote_url> | Add a remote repository |
+| git remote -v | List remote repositories |
+| git push <remote_name> <branch> | Push changes to a remote repository |
+| git pull <remote_name> <branch> | Pull changes from a remote repository |
+| git clone <remote_url> | Clone a remote repository |
+| git stash | Save uncommitted changes |
+| git stash apply | Apply saved changes |
+| git stash drop | Drop the stash |
+| git tag -a v1.0 -m "Version 1.0" | Create a tag and annotate it |
+| git tag | List all tags |
+| git push origin v1.0 | Push the tag to the remote repository |
+| git rebase -i HEAD~3 | Use interactive rebase to modify commit messages |
+| git cherry-pick <commit-hash> | Apply a specific commit to another branch |
+| git clone https://github.com/Hardagya12/salesforce-clone.git | Clone a remote repository |
+| git checkout -b fix-typo | Create a new branch and push the changes to the remote repository |
+| git checkout main | Switch to the main branch |
+| git checkout -b feature-enhanced | Create a new branch named feature-enhanced |
+| git checkout main | Switch to the main branch |
+| git merge feature-enhanced | Merge the feature-enhanced branch into the main branch |
+| git remote add origin https://github.com/Hardagya12/salesforce-clone.git | Add a remote repository |
+| git remote -v | List remote repositories |
+| git push origin fix-typo | Push the changes to the remote repository |
+| git clean -f | Remove untracked files |
+| git config --global alias.st status | Create an alias for the status command |
+| git config --global alias.cm commit | Create an alias for the commit command |
