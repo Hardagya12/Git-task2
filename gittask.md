@@ -85,3 +85,47 @@ This command unstages the file. It means the file will no longer be included in 
 git checkout -- file1.txt
 ```
 This command discards any changes made to the file since the last commit.
+
+# Part 3 : Branching and Merging
+
+## Task 6 : Branch Management
+
+1.Create a new branch and switch to it
+
+```bash
+
+git checkout -b feature-branch
+```
+This command creates a new branch named feature-login and switches to it.
+
+2. List all the branches
+
+```bash
+git branch
+```
+This command lists all the branches in the repository.
+
+3.Rename a branch
+
+```bash
+git branch -m feature-branch feature-enhanced
+```
+This command renames the branch feature-branch to feature-enhanced.
+
+## Task 7 : Merging Branches
+
+1. Merge feature-enhanced into main
+
+```bash
+git checkout main
+git merge feature-enhanced
+```
+
+This command merges the feature-enhanced branch into the main branch.
+
+### Task 8: Handling Merge Conflicts
+
+1. Create two conflicting branches and resolve a commit manually:
+
+```bash
+git merge 
